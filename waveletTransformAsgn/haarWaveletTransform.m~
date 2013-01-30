@@ -1,0 +1,12 @@
+clear all; close all;
+cd ~/Desktop/waveletTransformAsgn/;
+
+image = imread('sunflower.jpg');
+imgGray = mat2gray(rgb2gray(image));
+
+%% analysis
+
+
+[lowHorizontal, highHorizontal] = analyzeVertical(imgGray);
+figure(100); imshow(lowHorizontal);
+figure(200); imshow(highHorizontal);
